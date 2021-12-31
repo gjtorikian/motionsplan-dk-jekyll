@@ -1,0 +1,1199 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="da" class="no-js">
+  <head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7MDB7C');</script>
+<!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+
+
+
+
+<meta name="category" content="Kost">
+
+
+<title>KJ til kcal til kJ | Hurtig automatisk udregning</title>
+<meta name="description" content="Man har ofte bruge for at omregne kJ til kcal (kilojoule til kalorier) eller omvendt fra kcal til kJ (kalorier til kilojoule). Det har jeg lavet en beregner til, som gør det let og automatisk.">
+
+
+  <meta name="author" content="Lars Olesen">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="da">
+<meta property="og:site_name" content="Motionsplan">
+<meta property="og:title" content="KJ til kcal til kJ | Hurtig automatisk udregning">
+<meta property="og:url" content="https://www.motionsplan.dk/kj-kcal-omregner/">
+
+
+  <meta property="og:description" content="Man har ofte bruge for at omregne kJ til kcal (kilojoule til kalorier) eller omvendt fra kcal til kJ (kalorier til kilojoule). Det har jeg lavet en beregner til, som gør det let og automatisk.">
+
+
+
+  <meta property="og:image" content="https://images.unsplash.com/photo-1611077544695-c7942e060c4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1900&amp;q=5">
+
+
+
+  <meta name="twitter:site" content="@motionsplan">
+  <meta name="twitter:title" content="            KJ til kcal til kJ      Hurtig automatisk udregning      ">
+  <meta name="twitter:description" content="Man har ofte bruge for at omregne kJ til kcal (kilojoule til kalorier) eller omvendt fra kcal til kJ (kalorier til kilojoule). Det har jeg lavet en beregner til, som gør det let og automatisk.">
+  <meta name="twitter:url" content="https://www.motionsplan.dk/kj-kcal-omregner/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1611077544695-c7942e060c4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1900&amp;q=5">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2021-07-23T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2021-07-28T10:14:14+00:00">
+
+
+
+  
+    <meta property="article:publisher" content="https://www.facebook.com/motionsplan">
+  
+
+  
+    <meta property="fb:app_id" content="145274118551">
+  
+
+
+<link rel="canonical" href="https://www.motionsplan.dk/kj-kcal-omregner/">
+
+
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://www.motionsplan.dk/kj-kcal-omregner//#webpage",
+        "name": "KJ til kcal til kJ | Hurtig automatisk udregning",
+        "url": "https://www.motionsplan.dk",
+        "description": "<p>Man har ofte bruge for at omregne kJ til kcal (kilojoule til kalorier) eller omvendt fra kcal til kJ (kalorier til kilojoule). Det har jeg lavet en beregner til, som gør det let og automatisk.</p>",
+        "isPartOf": { "@type": "WebSite", "@id": "https://www.motionsplan.dk/#website" },
+        "datePublished": "2021-07-23 00:00:00 +0000",
+        "dateModified": "2021-07-28 10:14:14 +0000",
+        
+        "inLanguage": "da",
+        "potentialAction": [
+          { "@type": "ReadAction", "target": ["https://www.motionsplan.dk/kj-kcal-omregner/"] }
+        ]
+    }
+</script>
+
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "@id": "https://www.motionsplan.dk/kj-kcal-omregner//#article",
+        "inLanguage": "da",
+        "name": "Omregner fra KJ til kcal til kJ",
+        "headline": "KJ til kcal til kJ | Hurtig automatisk udregning",
+        "keywords": "beregner,kalorieberegner",
+        "description": "<p>Man har ofte bruge for at omregne kJ til kcal (kilojoule til kalorier) eller omvendt fra kcal til kJ (kalorier til kilojoule). Det har jeg lavet en beregner til, som gør det let og automatisk.</p>",
+        "articleBody": "Man har ofte bruge for at omregne kJ til kcal (kilojoule til kalorier) eller omvendt fra kcal til kJ (kalorier til kilojoule). Det har jeg lavet en beregner til, som gør det let og automatisk.\n\nDu kan naturligvis også selv lave omregningen, når du kender konstanten der kan omregne mellem joule og kalorier. 1 kalorie svarer til 4,184 Joule og 1 kilokalorie (kcal) svarer til 4,184 kiloJoule.\n\nVi starter med at gå direkte til beregneren, men læs gerne lidt videre af forklaringerne nedenunder.\n\nKJ til kcal beregner\n\nI denne enkle beregner kan du omregne mellem kilojoule og kalorier. Forholdet fra kilojoule til kalorier er 0,239 kcal/kJ. Det betyder, at du skal gange antallet af kJ med 0,239 for at få værdien i kalorier. Du kan også bare dele med de 4,184 J/cal for at omregne fra kJ til kcal.\n\n\n    \n        Omregner fra kJ til kcal\n        \n            KiloJoule (kJ)\n                \n            \n        \n        \n    \n    \n        \n            Kilokalorier (kcal)\n                \n            \n        \n    \n    \n    \n\n Køb mig en kaffe\n\n\n\n\n\nKcal til kJ omregner\n\nBeregneren omregner fra kalorier til kilojoule. Du skal altså gange antallet af kalorier med 4,184 J/cal for at få energien udtrykt i kJ. Det er lettest at lave beregningen fra kcal til kJ i en beregner.\n\n\n    \n        Omregner fra kcal til kJ\n        \n            Kilokalorier (kcal)\n                \n            \n        \n        \n    \n    \n        \n            KiloJoule (kJ)\n                \n            \n        \n    \n    \n    \n\n Køb mig en kaffe\n\n\n\n\n\nHvorfor skal jeg omregne fra kcal til kj og tilbage igen?\n\nDe fleste madvarer i Danmark har både kalorier og kilojoule i varedeklarationen, men energibetegnelserne bliver ofte anvendt alene forskellige steder. Hvis du fx er vant til at tænke i kalorier, men læser noget hvor svarene er i kJ, så er det rart hurtigt at kunne omregne værdierne.\n\nHvis du fx bruger vores beregner til ligevægtsindtag, så er det godt at kunne omregne til din foretrukne energiangivelse.\n\nKilokalorier (kcal) vs. kiloJoule (kJ)?\n\nI daglig tale kalder man det ofte kalorier, når man egentlig taler om kilokalorier. Jeg har skrevet meget mere uddybende om hvad kalorier er?.\n\nMen hvordan forholder det sig egentlig med kalorier og joule? De er begge betegnelser for energi, og de fleste støder jævnligt bekendtskab med dem, fordi de står på varedeklarationen på fødevarerne.\n\nKaloriebetegnelsen er den mest anvendte\n\nSelvom den officielle faglige enhed for energi er Joule, så er det alligevel kalorier der bliver brugt klart mest. Det betyder ikke så meget, hvilken betegnelse du bruger, men du skal bare være helt sikker på, at dem du snakker med bruger samme betegnelse for energi.\n\n\n  En kalorie er:\n  Den energi der skal bruges til at opvarme 1 gram vand 1 grad.\n  En Joule er:\n  \n    \n      den energi der skal bruges til at skabe en effekt på 1 Watt i et sekund\n    \n  \n  \n    \n      den energi man skal bruge på at flytte et objekt 1 meter med en kraft på 1 newton\n    \n  \n  \n    \n      den energi man skal bruge på at flytte en ladning på 1 Coulomb igennem en spændingsforskel\n    \n  \n\n\nDer går 4,184 Joule på en kalorie. Hvis du skal omregne fra kcal til kJ i hovedet, så kan du bare bruge omregningsfaktor 4 eller 4,2, så rammer du nogenlunde. Hvis du fx skal omregne 3000 kilokalorier til kilojoule, så bliver det altså 12600 kJ eller 12,6 MJ.\n\nEnergiindholdet i de forskellige makronæringsstoffer\n\nI kostberegninger skal du også vide, hvor meget energi der er i de enkelte makronæringsstoffer.\n\nVed beregning af energi skal du benytte følgende omregningsfaktorer:\n\n\n  \n    \n      Næringsstof\n      kJ/gram\n      kcal/gram\n    \n  \n  \n    \n      Kulhydrat\n      17\n      4\n    \n    \n      Protein\n      17\n      4\n    \n    \n      Fedt\n      37\n      9\n    \n    \n      Alkohol (ethanol)\n      29\n      7\n    \n    \n      Fibre\n      8\n      2\n    \n  \n\n\nOfte stillede spørgsmål\n\nHvor mange Joule (J) er der i en kalorie (cal)?\nDer går 4,184 Joule på en kalorie.\n\nHvor mange kiloJoule (kJ) er der i en kilokalorie (kcal)?\nDer går 4,184 kiloJoule (kJ) på en kilokalorie (kcal).\n\nHvordan regner man kalorier om til kilojoule?\nHvis du vil regne kalorier om til kilojoule, så skal du gange værdien i kalorier med 4,1862 for at få svaret i kilojoule. De fleste bruger bare faktor 4 eller 4,2 for at gøre det lidt lettere.\n\nHvordan regner man kilojoule om til kalorier?\nHvis du vil regne kilojoule om til kalorier, så skal du dividere værdien i kilojoule med 4,184 for at få værdien i kalorier. De fleste bruger bare faktor 4 eller 4,2 for at gøre det lidt lettere.\n\n",
+        "image": [
+            
+                "https://images.unsplash.com/photo-1611077544695-c7942e060c4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1900&amp;q=5"
+            
+        ],
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.motionsplan.dk/kj-kcal-omregner/"
+        },
+        "datePublished": "2021-07-23 00:00:00 +0000",
+        "dateModified": "2021-07-28 10:14:14 +0000",
+        "isAccessibleForFree": "True",
+        "author": {
+            "@type": "Person",
+            "name": "Lars Olesen",
+            "description": "Lars Olesen er cand.scient. i Idræt og Sundhed fra Syddansk Universitet. Til daglig lærer på Vejle Idrætshøjskole, hvor han underviser i styrketræning, ernæring og teambuilding - og uddanner fitnessinstruktører for DGI og DIF's Foreningsfitness.",
+            "sameAs": ["https://twitter.com/lsolesen","https://www.linkedin.com/in/lsolesen/","https://www.buymeacoffee.com/lsolesen"],
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://www.motionsplan.dk/assets/images/authors/larsolesen.jpg"
+            },
+            "publishingPrinciples": "https://www.motionsplan.dk/om/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Motionsplan",
+            "description": "Alt om test og træning til styrketræning, konditionstræning, cardio, yoga, løb og træning - med de videnskabelige briller. Samt et væld af træningsøvelser og træningsprogrammer.",
+            "sameAs": "https://www.motionsplan.dk",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.motionsplan.dk/assets/images/logo.gif"
+            },
+            "publishingPrinciples": "https://www.motionsplan.dk/om/"
+        }
+    }
+</script>
+
+
+
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":
+            [{"@type":"Question","name":"Hvor mange Joule (J) er der i en kalorie (cal)?","acceptedAnswer":{"@type":"Answer","text":"Der går 4,184 Joule på en kalorie.\n"}},{"@type":"Question","name":"Hvor mange kiloJoule (kJ) er der i en kilokalorie (kcal)?","acceptedAnswer":{"@type":"Answer","text":"Der går 4,184 kiloJoule (kJ) på en kilokalorie (kcal).\n"}},{"@type":"Question","name":"Hvordan regner man kalorier om til kilojoule?","acceptedAnswer":{"@type":"Answer","text":"Hvis du vil regne kalorier om til kilojoule, så skal du gange værdien i kalorier med 4,1862 for at få svaret i kilojoule. De fleste bruger bare faktor 4 eller 4,2 for at gøre det lidt lettere.\n"}},{"@type":"Question","name":"Hvordan regner man kilojoule om til kalorier?","acceptedAnswer":{"@type":"Answer","text":"Hvis du vil regne kilojoule om til kalorier, så skal du dividere værdien i kilojoule med 4,184 for at få værdien i kalorier. De fleste bruger bare faktor 4 eller 4,2 for at gøre det lidt lettere.\n"}}]
+    }
+</script>
+
+
+
+
+
+  <meta name="msvalidate.01" content="47BA759FF44194382E7F9A4BB31E8ABE">
+
+
+
+  <meta name="yandex-verification" content="c7c90c6d780c629d">
+
+
+
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Motionsplan Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+if (getCookie('AdsToggle') !== 0) {
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-9993815627805299",
+          enable_page_level_ads: true
+     });
+}
+</script>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" type="application/manifest+json" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script>
+// Check compatibility for the browser we're running this in
+if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    console.log("[Motionsplan] active service worker found, no need to register");
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+      .register("/pwabuilder-sw.js", {
+        scope: "./"
+      })
+      .then(function (reg) {
+        console.log("[Motionsplan] Service worker has been registered for scope: " + reg.scope);
+      });
+  }
+}
+</script>
+
+  </head>
+
+  <body class="layout--single">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7MDB7C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/logo.gif" alt="Motionsplan"></a>
+        
+        <a class="site-title" href="/">
+          Motionsplan
+          <span class="site-subtitle">Alt om test og træning</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/beregnere-tests/">Beregnere & Tests</a>
+            </li><li class="masthead__menu-item">
+              <a href="/traeningsformer/">Træningsformer</a>
+            </li><li class="masthead__menu-item">
+              <a href="/optimer-traening/">Optimer træning</a>
+            </li><li class="masthead__menu-item">
+              <a href="/krop-og-sundhed/">Krop & Sundhed</a>
+            </li><li class="masthead__menu-item">
+              <a href="/fitnessinstruktoer/">Til fitnessinstruktøren</a>
+            </li><li class="masthead__menu-item">
+              <a href="/styrke/">Styrketræning</a>
+            </li><li class="masthead__menu-item">
+              <a href="/kondition/">Kondition</a>
+            </li><li class="masthead__menu-item">
+              <a href="/loebesiden/">Løb</a>
+            </li><li class="masthead__menu-item">
+              <a href="/traeningsoevelser/">Træningsøvelser</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/inspiration/">Inspiration</a>
+            </li><li class="masthead__menu-item">
+              <a href="/om/">Om</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Vis/skjul menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('https://images.unsplash.com/photo-1611077544695-c7942e060c4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=5');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Omregner fra KJ til kcal til kJ
+
+        
+      </h1>
+      
+        <p class="page__lead">Man har ofte bruge for at omregne kJ til kcal (kilojoule til kalorier) eller omvendt fra kcal til kJ (kalorier til kilojoule). Det har jeg lavet en beregner til, som gør det let og automatisk.
+</p>
+      
+      
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minutters læsning
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Omregner fra KJ til kcal til kJ
+</span>
+  
+</div>
+
+
+
+
+  
+    <nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/" itemprop="item"><span itemprop="name">Forside</span></a>
+        <meta itemprop="position" content="1" />
+    </li>
+    <span class="sep">/</span>
+    
+    <li class="current">Omregner fra KJ til kcal til kJ</li>
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/authors/larsolesen.jpg" alt="Lars Olesen" itemprop="image" data-pin-nopin="true">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Lars Olesen</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Lars Olesen er cand.scient. i Idræt og Sundhed fra Syddansk Universitet. Til daglig lærer på Vejle Idrætshøjskole, hvor han underviser i styrketræning, ernæring og teambuilding - og uddanner fitnessinstruktører for DGI og DIF’s Foreningsfitness.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Følg</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:lars@vih.dk" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/lsolesen" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/lsolesen/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+          
+            <li><a href="https://www.buymeacoffee.com/lsolesen" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-mug-hot" aria-hidden="true"></i><span class="label">Køb mig en kaffe</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  <h3 class="nav__title" style="padding-left: 0;">Populære sider</h3>
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Vis/skjul menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Populære sider</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/bmi/">BMI for kvinder, mænd og børn</a></li>
+          
+            <li><a href="/artikel/tael-skridt/">Tæl skridt</a></li>
+          
+            <li><a href="/kondital/">Alt om dit kondital</a></li>
+          
+            <li><a href="/anaerob-traening/">Anaerob træning</a></li>
+          
+            <li><a href="/intervallob-intervaltraening/">Intervalløb og interval træning</a></li>
+          
+            <li><a href="/hvilepuls/">Hvilepuls</a></li>
+          
+            <li><a href="/test-max-puls/">Maxpuls</a></li>
+          
+            <li><a href="/balance/">Balancetræning</a></li>
+          
+            <li><a href="/borg-skala/">Borg skala</a></li>
+          
+            <li><a href="/hvor-mange-knogler-har-mennesket/">Hvor mange knogler har et menneske?</a></li>
+          
+            <li><a href="/muskler/">Alt om muskler i kroppen</a></li>
+          
+            <li><a href="/excentrisk-traening/">Excentrisk træning</a></li>
+          
+            <li><a href="/kompressionsstroemper-restitution-praestation-bivirkninger/">Kompressionsstrømper til løb og cykling</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Populære øvelser</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/armbojninger-eller-armstraekninger-pushups/">Armstrækninger og armbøjninger</a></li>
+          
+            <li><a href="/chinup-vs-pullup/">Pull ups og chin ups</a></li>
+          
+            <li><a href="/udstraekning-udspaending/">Strækøvelser og udstrækningsøvelser</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Populære tests</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cooper-test/">Cooper test</a></li>
+          
+            <li><a href="/bip-test/">Bip test</a></li>
+          
+            <li><a href="/rm-beregner/">RM beregner til styrketræning</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Populære beregnere</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/bmr-beregner-hvilestofskifte-basalstofskifte/">BMR og hvilestofskifte beregner</a></li>
+          
+            <li><a href="/beregner/ligevaegtsindtag-med-ligevaegtsberegner/">Ligevægtsindtag beregner</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Omregner fra KJ til kcal til kJ">
+    <meta itemprop="description" content="Man har ofte bruge for at omregne kJ til kcal (kilojoule til kalorier) eller omvendt fra kcal til kJ (kalorier til kilojoule). Det har jeg lavet en beregner til, som gør det let og automatisk.">
+    <meta itemprop="datePublished" content="2021-07-23T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2021-07-28T10:14:14+00:00">
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> På denne side</h4></header>
+              <ul class="toc__menu"><li><a href="#kj-til-kcal-beregner">KJ til kcal beregner</a></li><li><a href="#kcal-til-kj-omregner">Kcal til kJ omregner</a></li><li><a href="#hvorfor-skal-jeg-omregne-fra-kcal-til-kj-og-tilbage-igen">Hvorfor skal jeg omregne fra kcal til kj og tilbage igen?</a></li><li><a href="#kilokalorier-kcal-vs-kilojoule-kj">Kilokalorier (kcal) vs. kiloJoule (kJ)?</a></li><li><a href="#kaloriebetegnelsen-er-den-mest-anvendte">Kaloriebetegnelsen er den mest anvendte</a></li><li><a href="#energiindholdet-i-de-forskellige-makronæringsstoffer">Energiindholdet i de forskellige makronæringsstoffer</a></li><li><a href="#ofte-stillede-spørgsmål">Ofte stillede spørgsmål</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>Man har ofte bruge for at omregne kJ til kcal (kilojoule til kalorier) eller omvendt fra kcal til kJ (kalorier til kilojoule). Det har jeg lavet en beregner til, som gør det let og automatisk.</p>
+
+<p>Du kan naturligvis også selv lave omregningen, når du kender konstanten der kan omregne mellem joule og kalorier. <strong>1 kalorie svarer til 4,184 Joule</strong> og <strong>1 kilokalorie (kcal) svarer til 4,184 kiloJoule</strong>.</p>
+
+<p>Vi starter med at gå direkte til beregneren, men læs gerne lidt videre af forklaringerne nedenunder.</p>
+
+<h2 id="kj-til-kcal-beregner">KJ til kcal beregner</h2>
+
+<p>I denne enkle beregner kan du omregne mellem kilojoule og kalorier. Forholdet fra kilojoule til kalorier er 0,239 kcal/kJ. Det betyder, at du skal gange antallet af kJ med 0,239 for at få værdien i kalorier. Du kan også bare dele med de 4,184 J/cal for at omregne fra kJ til kcal.</p>
+
+<form class="calculator" id="calculator_kj_kcal">
+    <fieldset>
+        <legend>Omregner fra kJ til kcal</legend>
+        <div class="form-group">
+            <label>KiloJoule (kJ)
+                <input type="number" min="0" max="1000000" placeholder="fx 24" name="kj" required="" />
+            </label>
+        </div>
+        <input type="submit" value="Beregn" />
+    </fieldset>
+    <fieldset class="results">
+        <div class="form-group">
+            <label>Kilokalorier (kcal)
+                <input name="kcal" disabled="" />
+            </label>
+        </div>
+    </fieldset>
+    <div style="margin-top: 1em;" class="text-center align-center">
+    
+
+<a href="https://www.buymeacoffee.com/lsolesen" class="btn btn--large btn--bmc" rel="nofollow noopener"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" loading="lazy" alt="Køb mig en kaffe" /> Køb mig en kaffe</a>
+
+</div>
+
+</form>
+
+<h2 id="kcal-til-kj-omregner">Kcal til kJ omregner</h2>
+
+<p>Beregneren omregner fra kalorier til kilojoule. Du skal altså gange antallet af kalorier med 4,184 J/cal for at få energien udtrykt i kJ. Det er lettest at lave beregningen fra kcal til kJ i en beregner.</p>
+
+<form class="calculator" id="calculator_kcal_kj">
+    <fieldset>
+        <legend>Omregner fra kcal til kJ</legend>
+        <div class="form-group">
+            <label>Kilokalorier (kcal)
+                <input type="number" min="0" max="1000000" placeholder="fx 24" name="kcal" required="" />
+            </label>
+        </div>
+        <input type="submit" value="Beregn" />
+    </fieldset>
+    <fieldset class="results">
+        <div class="form-group">
+            <label>KiloJoule (kJ)
+                <input name="kj" disabled="" />
+            </label>
+        </div>
+    </fieldset>
+    <div style="margin-top: 1em;" class="text-center align-center">
+    
+
+<a href="https://www.buymeacoffee.com/lsolesen" class="btn btn--large btn--bmc" rel="nofollow noopener"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" loading="lazy" alt="Køb mig en kaffe" /> Køb mig en kaffe</a>
+
+</div>
+
+</form>
+
+<h2 id="hvorfor-skal-jeg-omregne-fra-kcal-til-kj-og-tilbage-igen">Hvorfor skal jeg omregne fra kcal til kj og tilbage igen?</h2>
+
+<p>De fleste madvarer i Danmark har både kalorier og kilojoule i varedeklarationen, men energibetegnelserne bliver ofte anvendt alene forskellige steder. Hvis du fx er vant til at tænke i kalorier, men læser noget hvor svarene er i kJ, så er det rart hurtigt at kunne omregne værdierne.</p>
+
+<p>Hvis du fx bruger vores <a href="/beregner/ligevaegtsindtag-med-ligevaegtsberegner/">beregner til ligevægtsindtag</a>, så er det godt at kunne omregne til din foretrukne energiangivelse.</p>
+
+<h2 id="kilokalorier-kcal-vs-kilojoule-kj">Kilokalorier (kcal) vs. kiloJoule (kJ)?</h2>
+
+<p>I daglig tale kalder man det ofte kalorier, når man egentlig taler om kilokalorier. Jeg har skrevet meget mere uddybende om <a href="/hvad-er-kalorier/">hvad kalorier er?</a>.</p>
+
+<p>Men hvordan forholder det sig egentlig med kalorier og joule? De er begge betegnelser for energi, og de fleste støder jævnligt bekendtskab med dem, fordi de står på varedeklarationen på fødevarerne.</p>
+
+<h2 id="kaloriebetegnelsen-er-den-mest-anvendte">Kaloriebetegnelsen er den mest anvendte</h2>
+
+<p>Selvom den officielle faglige enhed for energi er Joule, så er det alligevel kalorier der bliver brugt klart mest. Det betyder ikke så meget, hvilken betegnelse du bruger, men du skal bare være helt sikker på, at dem du snakker med bruger samme betegnelse for energi.</p>
+
+<dl>
+  <dt>En kalorie er:</dt>
+  <dd>Den energi der skal bruges til at opvarme 1 gram vand 1 grad.</dd>
+  <dt>En Joule er:</dt>
+  <dd>
+    <ul>
+      <li>den energi der skal bruges til at skabe en effekt på 1 Watt i et sekund</li>
+    </ul>
+  </dd>
+  <dd>
+    <ul>
+      <li>den energi man skal bruge på at flytte et objekt 1 meter med en kraft på 1 newton</li>
+    </ul>
+  </dd>
+  <dd>
+    <ul>
+      <li>den energi man skal bruge på at flytte en ladning på 1 Coulomb igennem en spændingsforskel</li>
+    </ul>
+  </dd>
+</dl>
+
+<p>Der går <strong>4,184 Joule på en kalorie</strong>. Hvis du skal omregne fra kcal til kJ i hovedet, så kan du bare bruge omregningsfaktor 4 eller 4,2, så rammer du nogenlunde. Hvis du fx skal omregne 3000 kilokalorier til kilojoule, så bliver det altså 12600 kJ eller 12,6 MJ.</p>
+
+<h2 id="energiindholdet-i-de-forskellige-makronæringsstoffer">Energiindholdet i de forskellige makronæringsstoffer</h2>
+
+<p>I kostberegninger skal du også vide, hvor meget energi der er i de enkelte makronæringsstoffer.</p>
+
+<p>Ved beregning af energi skal du benytte følgende omregningsfaktorer:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Næringsstof</th>
+      <th>kJ/gram</th>
+      <th>kcal/gram</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kulhydrat</td>
+      <td>17</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Protein</td>
+      <td>17</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Fedt</td>
+      <td>37</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Alkohol (ethanol)</td>
+      <td>29</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Fibre</td>
+      <td>8</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="ofte-stillede-spørgsmål">Ofte stillede spørgsmål</h2>
+
+<h3>Hvor mange Joule (J) er der i en kalorie (cal)?</h3>
+<p>Der går 4,184 Joule på en kalorie.</p>
+
+<h3>Hvor mange kiloJoule (kJ) er der i en kilokalorie (kcal)?</h3>
+<p>Der går 4,184 kiloJoule (kJ) på en kilokalorie (kcal).</p>
+
+<h3>Hvordan regner man kalorier om til kilojoule?</h3>
+<p>Hvis du vil regne kalorier om til kilojoule, så skal du gange værdien i kalorier med 4,1862 for at få svaret i kilojoule. De fleste bruger bare faktor 4 eller 4,2 for at gøre det lidt lettere.</p>
+
+<h3>Hvordan regner man kilojoule om til kalorier?</h3>
+<p>Hvis du vil regne kilojoule om til kalorier, så skal du dividere værdien i kilojoule med 4,184 for at få værdien i kalorier. De fleste bruger bare faktor 4 eller 4,2 for at gøre det lidt lettere.</p>
+
+
+        
+        <!-- Pinterest -->
+        
+        
+        
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Nøgleord: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#beregner" class="page__taxonomy-item" rel="tag">beregner</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#kalorieberegner" class="page__taxonomy-item" rel="tag">kalorieberegner</a>
+    
+    </span>
+  </p>
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Kategorier: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#kost" class="page__taxonomy-item" rel="tag">Kost</a>
+    
+    </span>
+  </p>
+
+
+
+        
+
+
+
+  
+    <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Opdateret:</strong> <time datetime="2021-07-28">July 28, 2021</time></p>
+  
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Del på</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=motionsplan&text=Omregner+fra+KJ+til+kcal+til+kJ%20https%3A%2F%2Fwww.motionsplan.dk%2Fkj-kcal-omregner%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Del på Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.motionsplan.dk%2Fkj-kcal-omregner%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Del på Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.motionsplan.dk%2Fkj-kcal-omregner%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Del på LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+  <a data-pin-do="buttonBookmark" data-pin-custom="true" href="https://www.pinterest.com/pin/create/button/" class="btn btn--pinterest btn--danger"><i class="fab fa-fw fa-pinterest" aria-hidden="true"></i><span> Pinterest</span></a>
+  <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/mikrotraening/" class="pagination--pager" title="Mikrotræning: 6 forslag til din ferietræning 💗
+">Forrige</a>
+    
+    
+      <a href="/ol-sange/" class="pagination--pager" title="OL-sange: Danmarks og IOC’s officielle sange til de Olympiske Lege
+">Næste</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">Måske kan du også lide</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="https://images.unsplash.com/photo-1526408984842-5f1323d42469?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=5" alt="Komplet guide til programlægning i styrketræning
+" data-pin-nopin="true">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/traeningsprogram-programlaegning-styrketraening/" rel="permalink">Komplet guide til programlægning i styrketræning
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          31 minutters læsning
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Jeg gennemgår her, hvordan man sammensætter et godt styrketræningsprogram til styrketræning. Jeg har gjort mig meget umage for, at denne guide til programlæg...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="https://images.unsplash.com/photo-1505676731599-081a7a67766a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=5" alt="Træningszoner: Find din intensitet i træning
+" data-pin-nopin="true">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/traeningszoner/" rel="permalink">Træningszoner: Find din intensitet i træning
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          27 minutters læsning
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">I forbindelse med konditionstræning kan det være hjælpsomt at arbejde med forskellige træningszoner. Her præsenterer vi nogle træningszoner, der er baseret p...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=5" alt="Kalorier: Hvad er en kalorie (cal) og en kilokalorie (kcal)?
+" data-pin-nopin="true">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/hvad-er-kalorier/" rel="permalink">Kalorier: Hvad er en kalorie (cal) og en kilokalorie (kcal)?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minutters læsning
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Jeg hører ofte mange forskellige spørgsmål om kalorier, fx : “Hvad er kalorier” eller “Hvad er en kalorie?” og “Hvad betyder kcal?” eller “Hvor mange kalorie...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="https://images.unsplash.com/photo-1560741282-a3ff4a507b4f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=5" alt="Hvor mange kalorier forbrænder man ved at gå? 🚶🚶‍♀️
+" data-pin-nopin="true">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/forbraending-ved-gaa-gang/" rel="permalink">Hvor mange kalorier forbrænder man ved at gå? 🚶🚶‍♀️
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          14 minutters læsning
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Jeg har kigget lidt på, hvor mange kalorier man forbrænder ved at gå? Så hvis du er interesseret i at vide, hvad din kalorieforbrænding og energiforbrug er v...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Hvad leder du efter..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Følg:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://facebook.com/motionsplan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://www.pinterest.dk/motionsplan/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+        
+      
+        
+          <li><a href="https://www.instagram.com/motionsplan/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/motionsplan" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UCpybeLG46oZfczu4LfI5K0A" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> Youtube</a></li>
+        
+      
+        
+          <li><a href="https://www.buymeacoffee.com/lsolesen" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-mug-hot" aria-hidden="true"></i> Støt sitet</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Motionsplan. Drives af <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  
+    <script src="/assets/js/bundle.js"></script>
+  
+
+
+
+  </body>
+</html>
