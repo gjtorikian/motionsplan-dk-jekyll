@@ -15,6 +15,5 @@ group :jekyll_plugins do
     gem "jekyll-algolia"
 end
 gem 'classifier-reborn'
-gem 'gsl'
-gem 'html-proofer'
+gem 'html-proofer', git: 'https://github.com/gjtorikian/html-proofer'
 gem "minimal-mistakes-jekyll", "~> 4.24"
